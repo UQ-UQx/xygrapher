@@ -7,8 +7,8 @@ This module is designed to work within the edX platform using the LTi module.
 
 ###Usage
 1. Create a new LTi block
-2. 
-
+2. Set launch URL to "https://tools.ceit.uq.edu.au/grapher/xygrapher/"
+3. Set lti_id to "test"
 4. Set custom_parameters:
 	- x_axis_label:X Axis
 	- y_axis_label:Y Axis
