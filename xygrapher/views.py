@@ -40,6 +40,7 @@ def index(request):
         'max_x_value': settings.XYGRAPHER_MAX_X_VALUE,
         'max_y_value': settings.XYGRAPHER_MAX_Y_VALUE,
         'showlines': settings.XYGRAPHER_SHOWLINES,
+        'title': settings.XYGRAPHER_TITLE,
     })
     if lti.is_valid():
        contextvars['post'] = lti.get_userid()
