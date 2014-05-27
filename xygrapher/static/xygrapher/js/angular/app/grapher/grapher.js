@@ -47,19 +47,21 @@ grapher.controller('GrapherCtrl',['$scope','modelLoader',function($scope, modelL
         if($scope.y_value_val == NaN) {
             $scope.y_value_val = 0;
         }
+        if(!isNaN($scope.x_value_val) && !isNaN($scope.y_value_val)) {
         //send the x and y value to the server
-        modelLoader.load($scope.submitURL, {'x': $scope.x_value_val, 'y': $scope.y_value_val, 'uid': $scope.student_id}).then(function (response) {
-            if (response.status == 'success') {
-                //set data and change state
-                if (response.data.saved == 'true') {
-                    setState();
-                } else {
-                    //show an error
-                }
-            } else {
-                //show an error
-            }
-        });
+			modelLoader.load($scope.submitURL, {'x': $scope.x_value_val, 'y': $scope.y_value_val, 'uid': $scope.student_id}).then(function (response) {
+				if (response.status == 'success') {
+					//set data and change state
+					if (response.data.saved == 'true') {
+						setState();
+					} else {
+						//show an error
+					}
+				} else {
+					//show an error
+				}
+			});
+        }
     };
 	
 	$scope.editGrade = function () {

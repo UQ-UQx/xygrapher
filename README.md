@@ -5,6 +5,14 @@ xygrapher
 This module allows students to enter a X/Y Value and see their value graphed along with the other learners in the cohourt.
 This module is designed to work within the edX platform using the LTi module.
 
+###Installation
+1. Copy the files over from github onto the associated server
+2. Add in the apache configuration
+3. Create the appropriate mongo database (set in settings.production)
+4. Set consumer key in MongoDB - "db.consumer.insert({consumer_key:"test",consumer_secret:"12345"})"
+5. Change cookie domain in settings - SESSION_COOKIE_DOMAIN = 'tools.ceit.uq.edu.au'
+6. Add the module via LTi into edX (see usage)
+
 ###Usage
 1. In the course, go to Settings > Advanced Settings
 2. For Policy Key "advanced_modules" add "lti" to the array
